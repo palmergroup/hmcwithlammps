@@ -1,0 +1,24 @@
+# mW water
+
+# Units and atom style
+units		real
+atom_style	atomic
+
+# Needs to be here to get atom order correct when invoking gather and scatter in the Python driver
+atom_modify     map array sort 0 0.0
+ 
+# Read configuration file
+read_data	in.dat
+
+# Potential style
+pair_style sw
+pair_coeff * * mW.sw W
+
+# Neighbor list - may need to adjust if using a large time step
+neighbor	2.5 bin
+neigh_modify	every 5 delay 0 check yes
+
+
+# Integrator and initialization
+fix 1           all nve
+run		0

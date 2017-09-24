@@ -1,0 +1,4 @@
+module load libmatheval
+module load python/2.6-extra
+module load openmpi/1.8.3-intel
+f2py -c -m oplib oplib.f90 --fcompiler=intelem --f90flags='-O3'
