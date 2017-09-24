@@ -1,6 +1,6 @@
 # hmcwithlammps
 
-# Python scripts for performing hybrid Monte Carlo (HMC) in the isothermal-isobaric ensemble with LAMMMPS.  
+# Python scripts for performing hybrid Monte Carlo (HMC) with LAMMMPS.  
 
 Updated: September 24, 2017
 
