@@ -1,0 +1,1 @@
+python analyze-md.py --filetype flatfile -f t1.dat t2.dat  -t 132.0 145.5 -b 100  -i 20  -v -g potential -e potential -s 12345 > potential.txt
