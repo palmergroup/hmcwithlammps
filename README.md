@@ -9,7 +9,7 @@ Notes:
 - The code was developed and tested using LAMMPS-17Nov16 release  
 - The Python scripts require LAMMPS to be built as a shared library (see http://lammps.sandia.gov/doc/Section_start.html)
 
-Installation for LAMMPS-17Nov16 release: 
+Installing LAMMPS as a shared library (LAMMPS-17Nov16 release): 
 1.  Build LAMMPS as a shared library
     - cd /pathtolammps/src
     - make machine mode=shlib, where machine specifies the appropriate makefile located at /pathtolammps/src/MAKE/Makefile.machine.The Makefile.machine should specify the appropriate FFTW and MPICH libraries; FFTW and MPICH must also be built as shared libraries
