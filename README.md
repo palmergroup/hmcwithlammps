@@ -2,12 +2,20 @@
 
 # Python scripts for performing hybrid Monte Carlo (HMC) with LAMMMPS.  
 
-Updated: September 24, 2017
+Updated: January 19, 2018
 
 Notes:
 - A manuscript documenting the code development and validation strategy is currently in preparation
 - The code was developed and tested using LAMMPS-17Nov16 release  
-- The Python scripts require LAMMPS to be built as a library (see http://lammps.sandia.gov/doc/Section_start.html)
+- The Python scripts require LAMMPS to be built as a shared library (see http://lammps.sandia.gov/doc/Section_start.html)
+
+Installation for LAMMPS-17Nov16 release: 
+1.  Build LAMMPS as a shared library
+    - cd /pathtolammps/src
+    - make machine mode=shlib, where machine specifies the appropriate makefile located at /pathtolammps/src/MAKE/Makefile.machine.The Makefile.machine should specify the appropriate FFTW and MPICH libraries; FFTW and MPICH must also be built as shared libraries
+2. Set environmental variables to add /pathtolammps/python/lammps.py and /pathtolammps/src/liblammps.so to the appropriate paths. For bash shell, this can be accomplished by add the following lines to ~/.bashrc:
+    - export PYTHONPATH=/pathtolammps/python:$PYTHONPATH
+    - export LD_LIBRARY_PATH=/pathtolammps/src:$LD_LIBRARY_PATH
 
 Examples:
 - LJ_Argon_132K_NVT:  Canonical ensemble HMC simulation of Lennard-Jones argon at 132 K and a density of 0.451 g/cc
