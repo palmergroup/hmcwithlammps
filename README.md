@@ -6,8 +6,9 @@ Updated: January 19, 2018
 
 Notes:
 - A manuscript documenting the code development and validation strategy is currently in preparation
-- The code was developed and tested using LAMMPS-17Nov16 release  
+- The code was developed and tested using Python 2.7 and LAMMPS-17Nov16 release 
 - The Python scripts require LAMMPS to be built as a shared library (see http://lammps.sandia.gov/doc/Section_start.html)
+ 
 
 Installing LAMMPS as a shared library (LAMMPS-17Nov16 release): 
 1.  Build LAMMPS as a shared library
