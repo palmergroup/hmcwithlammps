@@ -242,7 +242,7 @@ SUBROUTINE calc_q3_cluster(n_atoms,n_q3_neigh,q3_cutoff,n_bonds,box,x,largest_cl
       DO i = -3,3
         dij(j,iatom) = dij(j,iatom) + sum_q3(i,iatom)*CONJG(sum_q3(i,jatom))
       ENDDO
-      dij(j,iatom) = fcij*dij(j,iatom)/(q3iatom(iatom)*q3iatom(jatom))/DBLE(n_nneigh(iatom)**2)
+      dij(j,iatom) = fcij*dij(j,iatom)/(q3iatom(iatom)*q3iatom(jatom))/DBLE(n_nneigh(iatom)*n_nneigh(jatom))
       IF((dij(j,iatom) .LE. -0.82d0) .OR. ((dij(j,iatom) .GE. -0.145d0) .AND. (dij(j,iatom) .LE. -0.065d0))) THEN
          n_dij_bonds(iatom) = n_dij_bonds(iatom) + 1
       ENDIF
